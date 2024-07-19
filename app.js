@@ -66,7 +66,7 @@ mongoose
   .connect(DB_URL) // connects to DB using URL
   .then(() => {
     console.log("CONNECTED TO DATABASE");
-    app.listen(5000); // if connection is established, start server
+    app.listen(process.env.PORT || 5000); // if connection is established, start server
   })
   .catch((error) => {
     console.log(error);
